@@ -1,61 +1,43 @@
-# Full-Stack Demo
+# Expensify App (Full-Stack Demo) 🚀💰
 
-Spring Boot 4 backend + React frontend with MySQL.
+A full-stack expense management application with **Spring Boot 4** backend, **React** frontend, and **MySQL** database. Track, manage, and visualize expenses efficiently.
 
-## Prerequisites
+---
 
-- **Backend:** Red Hat OpenJDK 25 (or Java 21+), Maven
-- **Frontend:** Node.js 18+, npm
-- **Database:** Docker (for MySQL)
+## Features ✨
 
-## Quick Start
+- ![Login Icon](https://img.icons8.com/ios-filled/24/000000/login-rounded-right.png) **User Authentication**: Secure login and registration.  
+- ![Expense Icon](https://img.icons8.com/ios-filled/24/000000/expense.png) **Expense Management**: Add, edit, delete, and categorize expenses.  
+- ![Chart Icon](https://img.icons8.com/ios-filled/24/000000/combo-chart--v1.png) **Expense Summary**: View total expenses by category or month.  
+- ![Dashboard Icon](https://img.icons8.com/ios-filled/24/000000/dashboard-layout.png) **Interactive Dashboard**: Real-time charts and visualizations.  
+- ![Responsive Icon](https://img.icons8.com/ios-filled/24/000000/responsive.png) **Responsive UI**: Works on desktop and mobile.  
+- ![API Icon](https://img.icons8.com/ios-filled/24/000000/api-settings.png) **Backend API**: RESTful endpoints with Spring Boot.  
+- ![Database Icon](https://img.icons8.com/ios-filled/24/000000/database.png) **Database Persistence**: MySQL integration for storing data.  
+
+---
+
+## Tech Stack 🛠️
+
+### Backend
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
+
+### Frontend
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+
+### Database & Tools
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/Docker_Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+---
+
+## Quick Start ⚡
 
 ### 1. Start MySQL
-
 ```bash
 docker compose up -d
-```
-
-Wait until MySQL is healthy (e.g. `docker compose ps` shows healthy).
-
-### 2. Run the backend
-
-```bash
-cd server
-mvn spring-boot:run
-```
-
-Backend runs at **http://localhost:8080**. Test: [http://localhost:8080/api/test](http://localhost:8080/api/test).
-
-### 3. Run the frontend
-
-```bash
-cd client
-npm install
-npm run dev
-```
-
-Frontend runs at **http://localhost:5173**. Use the **Test Connection** button to call the backend.
-
-## Project layout
-
-| Path | Description |
-|------|-------------|
-| `server/` | Spring Boot 4.0 (Maven): Web, JPA, MySQL, Lombok |
-| `client/` | React (Vite) + Tailwind CSS + Framer Motion |
-| `docker-compose.yml` | MySQL 8.0 for local development |
-
-## API
-
-- **GET /api/test** — Returns `{ "status": "ok", "message": "Backend is reachable", "timestamp": "..." }`.
-
-## Database
-
-Default connection (from `server/src/main/resources/application.properties`):
-
-- Host: `localhost:3306`
-- Database: `appdb`
-- User: `appuser`
-- Password: `apppass`
-
-Change these or set env vars if needed.
